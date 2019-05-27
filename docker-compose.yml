@@ -1,0 +1,13 @@
+version: '3'
+
+services: 
+  go-poc:
+    container_name: go-poc
+    image: golang:1.12.5-alpine
+    working_dir: /app
+    volumes: 
+      - ./app:/app
+    ports:
+      - "18080:8080"
+    command: >
+      ./hello
